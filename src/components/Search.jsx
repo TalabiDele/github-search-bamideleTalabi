@@ -32,7 +32,7 @@ const Search = ({ header }) => {
 
 	return (
 		<div className=' '>
-			{isRoute && <Navigate to={`/search/${'users'}/${username}`} replace />}
+			{isRoute && <Navigate to={`/search/${type}/${username}`} replace />}
 			<form
 				className='  w-[30rem] mx-auto max-md:w-[90vw]'
 				onSubmit={handleSearch}
@@ -63,7 +63,7 @@ const Search = ({ header }) => {
 							type='radio'
 							name='users'
 							id='users'
-							// value={'users'}
+							value={'users'}
 							aria-label='users'
 							checked={type === 'users'}
 							onChange={handleChange}
@@ -76,7 +76,7 @@ const Search = ({ header }) => {
 						<input
 							type='radio'
 							aria-label='orgs'
-							// value={'orgs'}
+							value={'orgs'}
 							name='orgs'
 							id='orgs'
 							checked={type === 'orgs'}

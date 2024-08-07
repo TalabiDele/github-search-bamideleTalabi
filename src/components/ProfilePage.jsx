@@ -29,7 +29,7 @@ const ProfilePage = () => {
 		setLoading(true)
 
 		try {
-			const response = await octokit.request(`GET /search/${type}`, {
+			const response = await octokit.request(`GET /search/users`, {
 				headers: {
 					'X-GitHub-Api-Version': '2022-11-28',
 				},
